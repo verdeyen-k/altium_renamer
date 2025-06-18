@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; --- Entry for right-clicking in the BACKGROUND of a folder 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AltiumRename]
+@="Rename Altium Project Files"
+"Icon"="C:\\WindowsScripts\\Rename-Altium-Projects\\motherboard.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AltiumRename\command]
+@="\"C:\\Users\\KrisVerdeyen\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe\" \"C:\\WindowsScripts\\Rename-Altium-Projects\\altium_renamer.py\" \"%V\""
+
+; --- For right-clicking DIRECTLY ON A FOLDER ICON/NAME ---
+; This key is often more reliable for actual folder objects.
+[HKEY_CLASSES_ROOT\Folder\shell\AltiumRename]
+@="Rename Altium Project Files"
+"Icon"="C:\\WindowsScripts\\Rename-Altium-Projects\\motherboard.ico"
+
+[HKEY_CLASSES_ROOT\Folder\shell\AltiumRename\command]
+@="\"C:\\Users\\KrisVerdeyen\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe\" \"C:\\WindowsScripts\\Rename-Altium-Projects\\altium_renamer.py\" \"%V\""
